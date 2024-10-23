@@ -4,6 +4,7 @@ import 'package:team_intro/models/member_info.dart';
 import 'package:team_intro/models/page_info.dart';
 import 'package:team_intro/screens/main_menu_page.dart';
 import 'package:team_intro/widgets/content_page.dart';
+import 'package:team_intro/widgets/introduction_ksj.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -23,10 +24,11 @@ class _MainPageState extends State<MainPage> {
     _pages = [
       PageInfo(
         title: '김승주',
-        page: ContentPage(
+        page: IntroductionKsj(
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/seungju_kim.png',
+            characterImagePath: 'assets/images/character_seungju_kim.png', 
             isLeader: true,
             name: '김승주',
             email: 'pasion2585@naver.com',
@@ -43,6 +45,7 @@ class _MainPageState extends State<MainPage> {
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/yujun_lee.png',
+            characterImagePath: 'assets/images/character_yujun_lee.png',
             isLeader: false,
             name: '이유준',
             email: 'yl1503412@gmail.com',
@@ -59,6 +62,7 @@ class _MainPageState extends State<MainPage> {
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/seungjun_lee.png',
+            characterImagePath: 'assets/images/character_seungjun_lee.png',
             isLeader: false,
             name: '이승준',
             email: 'junny3344@gmail.com',
@@ -75,6 +79,7 @@ class _MainPageState extends State<MainPage> {
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/hyeonjeong_lee.png',
+            characterImagePath: 'assets/images/character_hyeonjeong_lee.png',
             isLeader: false,
             name: '이현정',
             email: 'jl20lemon@gmail.com',
