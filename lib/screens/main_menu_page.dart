@@ -22,22 +22,25 @@ class MainMenuPage extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        pages[0].title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold, // 볼드체
-                          fontSize: 30.0, // 글자 크기
+                  GestureDetector(
+                    onTap: () => onPageSelected(1),
+                    child: Column(
+                      children: [
+                        Text(
+                          pages[0].title,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold, // 볼드체
+                            fontSize: 30.0, // 글자 크기
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 10),
-                      Image.asset(
-                        'assets/images/character_seungju_kim.png',
-                        width: MediaQuery.of(context).size.width * 0.45,
-                        fit: BoxFit.cover,
-                      ),
-                    ],
+                        const SizedBox(height: 10),
+                        Image.asset(
+                          'assets/images/character_seungju_kim.png',
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          fit: BoxFit.cover,
+                        ),
+                      ],
+                    ),
                   ),
                   const Flexible(
                     // Add Flexible here
@@ -81,58 +84,67 @@ class MainMenuPage extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/images/character_yujun_lee.png',
-                        width: MediaQuery.of(context).size.width * 0.3 - 2,
-                        fit: BoxFit.cover,
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        pages[1].title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold, // 볼드체
-                          fontSize: 30.0, // 글자 크기
+                  GestureDetector(
+                    onTap: () => onPageSelected(2),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/character_yujun_lee.png',
+                          width: MediaQuery.of(context).size.width * 0.3 - 2,
+                          fit: BoxFit.cover,
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 10),
+                        Text(
+                          pages[1].title,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold, // 볼드체
+                            fontSize: 30.0, // 글자 크기
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(width: 3),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/images/character_seungjun_lee.png',
-                        width: MediaQuery.of(context).size.width * 0.3 - 2,
-                        fit: BoxFit.cover,
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        pages[2].title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold, // 볼드체
-                          fontSize: 30.0, // 글자 크기
+                  GestureDetector(
+                    onTap: () => onPageSelected(3),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/character_seungjun_lee.png',
+                          width: MediaQuery.of(context).size.width * 0.3 - 2,
+                          fit: BoxFit.cover,
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 10),
+                        Text(
+                          pages[2].title,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold, // 볼드체
+                            fontSize: 30.0, // 글자 크기
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(width: 3),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'assets/images/character_hyeonjeong_lee.png',
-                        width: MediaQuery.of(context).size.width * 0.3 - 2,
-                        fit: BoxFit.cover,
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        pages[3].title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold, // 볼드체
-                          fontSize: 30.0, // 글자 크기
+                  GestureDetector(
+                    onTap: () => onPageSelected(4),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/character_hyeonjeong_lee.png',
+                          width: MediaQuery.of(context).size.width * 0.3 - 2,
+                          fit: BoxFit.cover,
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 10),
+                        Text(
+                          pages[3].title,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold, // 볼드체
+                            fontSize: 30.0, // 글자 크기
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
