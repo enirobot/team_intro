@@ -1,6 +1,7 @@
 class MemberInfo {
   final String teamName;
   final String imagePath;
+  final String characterImagePath;
   final bool isLeader;
   final String name;
   final String email;
@@ -11,6 +12,7 @@ class MemberInfo {
   const MemberInfo({
     required this.teamName,
     required this.imagePath,
+    required this.characterImagePath,
     required this.isLeader,
     required this.name,
     required this.email,

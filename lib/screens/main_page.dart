@@ -6,6 +6,9 @@ import 'package:team_intro/screens/main_menu_page.dart';
 import 'package:team_intro/widgets/content_page.dart';
 import 'package:team_intro/widgets/introduction_junny.dart';
 
+import 'package:team_intro/widgets/introduction_liyujun.dart';
+import 'package:team_intro/widgets/introduction_ksj.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -24,10 +27,11 @@ class _MainPageState extends State<MainPage> {
     _pages = [
       PageInfo(
         title: '김승주',
-        page: ContentPage(
+        page: IntroductionKsj(
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/seungju_kim.png',
+            characterImagePath: 'assets/images/character_seungju_kim.png',
             isLeader: true,
             name: '김승주',
             email: 'pasion2585@naver.com',
@@ -42,17 +46,22 @@ class _MainPageState extends State<MainPage> {
       ),
       PageInfo(
         title: '이유준',
-        page: ContentPage(
+        page: adde(
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/yujun_lee.png',
+            characterImagePath: 'assets/images/character_yujun_lee.png',
             isLeader: false,
             name: '이유준',
             email: 'yl1503412@gmail.com',
-            introduction: '안녕하세요. \n부트캠프에 참가 하게 되어 \n기뻐요.  평소 노란색을 좋아합니다.',
+            introduction: '안녕하세요. \n부트캠프에 참가 하게 되어 \n기쁩니다.',
             mbti: 'ESFJ',
+<<<<<<< HEAD
             blogUrl:
                 'https://pasion2585.notion.site/10b20681ea5f8023a1f4dc5c4242f33c?pvs=4',
+=======
+            blogUrl: 'https://yl1503412.tistory.com/',
+>>>>>>> fbc2a6b0d2b10f7599c33944d8349dc2a3a55ccb
           ),
           onBackPressed: () => _navigateToPage(0),
         ),
@@ -63,12 +72,18 @@ class _MainPageState extends State<MainPage> {
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/seungjun_lee.png',
+            characterImagePath: 'assets/images/character_seungjun_lee.png',
             isLeader: false,
             name: '이승준',
             email: 'junny3344@gmail.com',
             introduction: '좋아하는색 : 주황색\n전공 : 축산과, 양돈, 사무\n관심사 : 인문학',
             mbti: 'ENTP',
+<<<<<<< HEAD
             blogUrl: 'https://247wd.tistory.com/',
+=======
+            blogUrl:
+                'https://pasion2585.notion.site/10b20681ea5f8023a1f4dc5c4242f33c?pvs=4',
+>>>>>>> fbc2a6b0d2b10f7599c33944d8349dc2a3a55ccb
           ),
           onBackPressed: () => _navigateToPage(0),
         ),
@@ -79,6 +94,7 @@ class _MainPageState extends State<MainPage> {
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/hyeonjeong_lee.png',
+            characterImagePath: 'assets/images/character_hyeonjeong_lee.png',
             isLeader: false,
             name: '이현정',
             email: 'jl20lemon@gmail.com',
