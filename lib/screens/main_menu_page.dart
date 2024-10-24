@@ -162,10 +162,13 @@ class MainMenuPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0), // 모서리 곡선 정도
                     ),
                   ),
-                  child: const Text(
-                    '팀원보기',
-                    style: TextStyle(fontSize: 40, color: Colors.white),
-                    textAlign: TextAlign.center,
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Text(
+                      '팀원보기',
+                      style: TextStyle(fontSize: 40, color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
