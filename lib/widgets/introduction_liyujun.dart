@@ -54,7 +54,7 @@ class adde extends StatelessWidget {
                   ),
                   child: ClipOval(
                     child: Transform.scale(
-                      scale: 2.0,
+                      scale: 1.0,
                       child: Image.asset(
                         memberInfo.imagePath,
                         fit: BoxFit.cover,
