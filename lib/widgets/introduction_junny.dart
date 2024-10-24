@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:team_intro/models/member_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ContentPage extends StatelessWidget {
+class junny extends StatelessWidget {
   final MemberInfo memberInfo;
   final VoidCallback onBackPressed;
 
-  const ContentPage({
+  const junny({
     super.key,
     required this.memberInfo,
     required this.onBackPressed,
@@ -16,16 +16,17 @@ class ContentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(50.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const SizedBox(height: 30),
             Text(
               memberInfo.teamName,
               style: const TextStyle(
-                fontSize: 40,
+                fontSize: 60,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue,
+                color: Colors.orange,
               ),
             ),
             const SizedBox(height: 20),
@@ -56,7 +57,7 @@ class ContentPage extends StatelessWidget {
                 vertical: 6,
               ),
               decoration: BoxDecoration(
-                color: memberInfo.isLeader ? Colors.amber : Colors.green,
+                color: memberInfo.isLeader ? Colors.amber : Colors.orange,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -83,7 +84,7 @@ class ContentPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.grey[100],
+                color: Colors.orange,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -104,12 +105,13 @@ class ContentPage extends StatelessWidget {
             ElevatedButton(
               onPressed: onBackPressed,
               style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 16,
+                  horizontal: 70,
+                  vertical: 30,
                 ),
               ),
-              child: const Text('메인으로 돌아가기'),
+              child: const Text('메인으로'),
             ),
           ],
         ),
