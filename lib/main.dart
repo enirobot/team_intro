@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:team_intro/screens/main_page.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Page Navigation Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: const MainPage(),
     );
