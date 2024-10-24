@@ -4,6 +4,7 @@ import 'package:team_intro/models/member_info.dart';
 import 'package:team_intro/models/page_info.dart';
 import 'package:team_intro/screens/main_menu_page.dart';
 import 'package:team_intro/widgets/content_page.dart';
+import 'package:team_intro/widgets/introduction_huynjung.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -71,7 +72,7 @@ class _MainPageState extends State<MainPage> {
       ),
       PageInfo(
         title: '이현정',
-        page: ContentPage(
+        page: Huynjung(
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/hyeonjeong_lee.png',
