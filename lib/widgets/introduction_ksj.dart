@@ -15,135 +15,64 @@ class IntroductionKsj extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              memberInfo.teamName,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
-              ),
-              child: ClipOval(
-                child: Image.asset(
-                  memberInfo.imagePath,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 12,
-                vertical: 6,
-              ),
-              decoration: BoxDecoration(
-                color: memberInfo.isLeader ? Colors.amber : Colors.green,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                memberInfo.isLeader ? '팀장' : '팀원',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              memberInfo.name,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            _buildInfoRow(Icons.email, memberInfo.email),
-            const SizedBox(height: 8),
-            _buildInfoRow(Icons.psychology, 'MBTI: ${memberInfo.mbti}'),
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                memberInfo.introduction,
-                style: const TextStyle(
-                  fontSize: 16,
-                  height: 1.5,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(height: 16),
-            InkWell(
-              onTap: () {},
-              child: _buildInfoRow(Icons.link, '블로그 방문하기'),
-            ),
-            const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: onBackPressed,
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 16,
-                ),
-              ),
-              child: const Text('메인으로 돌아가기'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildInfoRow(IconData icon, String text) {
-    return ElevatedButton(
-      onPressed: () => _launchUrl(memberInfo.blogUrl),
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 32,
-          vertical: 16,
-        ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
+      child: Stack(
         children: [
-          Icon(icon, size: 20),
-          const SizedBox(width: 8),
-          Text(
-            text,
-            style: const TextStyle(fontSize: 16),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.white10,
           ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.3,
+            color: const Color(0xFF00AACC),
+            child: Align(
+              alignment: const Alignment(0, -0.3), // x = 0 (가운데), y = -0.3 (상단 30%)
+              child: GestureDetector(
+                  onTap: onBackPressed,
+                  child: const Text(
+                    '구사조',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                    ),
+                  ),
+                ),
+            ),
+            // child: Center(
+            //   child: Padding(
+            //     padding: const EdgeInsets.only(bottom: 20.0), // 하단 패딩 추가
+            //     child: GestureDetector(
+            //       onTap: onBackPressed,
+            //       child: const Text(
+            //         '구사조',
+            //         textAlign: TextAlign.center,
+            //         style: TextStyle(
+            //           color: Colors.white,
+            //           fontWeight: FontWeight.bold,
+            //           fontSize: 40,
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.3 - 75,
+            left: MediaQuery.of(context).size.width * 0.5 - 75,
+            width: 150,
+            height: 150,
+            child: ClipOval(
+              child: Image.asset(
+                memberInfo.imagePath,
+                fit: BoxFit.cover,
+              ),
+            ),
+          )
         ],
       ),
     );
-  }
-
-  Future<void> _launchUrl(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (!await launchUrl(uri)) {
-      throw Exception('Could not launch $url');
-    }
   }
 }
