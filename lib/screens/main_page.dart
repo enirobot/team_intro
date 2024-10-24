@@ -18,6 +18,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   late final PageController _pageController;
   late final List<PageInfo> _pages;
+  int _activePage = 0; // 현재 활성화된 페이지 인덱스
 
   @override
   void initState() {
@@ -116,18 +117,62 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
+      body: Column(
         children: [
-          MainMenuPage(
-            pages: _pages,
-            onPageSelected: _navigateToPage,
+          Expanded(
+            child: PageView(
+                controller: _pageController,
+                onPageChanged: (int page) {
+                  setState(() {
+                    _activePage = page;
+                  });
+                },
+                children: [
+                  MainMenuPage(
+                    pages: _pages,
+                    onPageSelected: _navigateToPage,
+                  ),
+                  ..._pages.map((pageInfo) => pageInfo.page),
+                ]),
           ),
-          _pages[0].page, // 팀원 1 페이지
-          _pages[1].page, // 팀원 2 페이지
-          _pages[2].page, // 팀원 3 페이지
-          _pages[3].page, // 팀원 4 페이지
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center, // 중앙에 정렬
+            children:
+                List.generate(_pages.length, (index) => buildBar(index + 1)),
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget buildBar(int index) {
+    Color getColor(int pageIndex) {
+      switch (pageIndex) {
+        case 0:
+          return Colors.blue; // Default color for initial state
+        case 1:
+          return const Color(0xFF00AACC); // Color for page 1
+        case 2:
+          return const Color(0xFFFFCD29); // Color for page 2
+        case 3:
+          return const Color(0xFFED8A00); // Color for page 3
+        case 4:
+          return const Color(0xFF60338D); // Color for page 4
+        default:
+          return Colors.grey; // Fallback color
+      }
+    }
+
+    return Expanded(
+      child: AnimatedContainer(
+        duration:
+            const Duration(milliseconds: 180), // Duration of the animation
+        height: 8, // Height of the bar
+        decoration: BoxDecoration(
+          color: _activePage >= index
+              ? getColor(_activePage)
+              : const Color(0xFFEEEEEE),
+        ),
       ),
     );
   }
