@@ -3,7 +3,6 @@ import 'package:team_intro/constants.dart';
 import 'package:team_intro/models/member_info.dart';
 import 'package:team_intro/models/page_info.dart';
 import 'package:team_intro/screens/main_menu_page.dart';
-import 'package:team_intro/widgets/content_page.dart';
 import 'package:team_intro/widgets/introduction_huynjung.dart';
 import 'package:team_intro/widgets/introduction_junny.dart';
 import 'package:team_intro/widgets/introduction_liyujun.dart';

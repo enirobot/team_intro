@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^6.2.5  # URL 실행을 위한 패키지
-
+  webview_flutter: ^4.10.0
 
 
   # The following adds the Cupertino Icons font to your application.
