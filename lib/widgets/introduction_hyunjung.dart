@@ -29,7 +29,7 @@ class Huynjung extends StatelessWidget {
                 color: Color.fromARGB(230, 230, 230, 230))
           ])),
           Positioned(
-              top: 25,
+              top: 65,
               right: MediaQuery.of(context).size.width * 0.5 - 100,
               child: Stack(children: [
                 Container(
