@@ -18,13 +18,13 @@ class adde extends StatelessWidget {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.end, //축 정렬
       children: [
-        const SizedBox(height: 51),
         Container(
             color: const Color.fromARGB(160, 255, 205, 41),
             width: 500,
             height: 400,
             child: Column(
               children: [
+                const SizedBox(height: 51),
                 Center(
                   child: TextButton(
                     style: TextButton.styleFrom(
@@ -38,7 +38,7 @@ class adde extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 100),
+                const SizedBox(height: 49),
                 Container(
                   width: 200,
                   height: 200,
