@@ -43,13 +43,13 @@ class MainMenuPage extends StatelessWidget {
                   ),
                   const Flexible(
                     // Add Flexible here
-                    child: Padding(
-                      padding:
-                          EdgeInsets.only(left: 14.0), // Flexible 부분에 왼쪽 패딩 추가
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 12.0), // Flexible 부분에 왼쪽 패딩 추가
+                          child: Text(
                             '구사조',
                             softWrap: true,
                             style: TextStyle(
@@ -57,8 +57,12 @@ class MainMenuPage extends StatelessWidget {
                               fontSize: 50.0, // 글자 크기
                             ),
                           ),
-                          SizedBox(height: 13),
-                          Text(
+                        ),
+                        SizedBox(height: 13),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 13.0), // Flexible 부분에 왼쪽 패딩 추가
+                          child: Text(
                             '안녕하세요!\n구사조입니다.',
                             softWrap: true,
                             style: TextStyle(
@@ -66,16 +70,20 @@ class MainMenuPage extends StatelessWidget {
                               fontSize: 18.0, // 글자 크기
                             ),
                           ),
-                          SizedBox(height: 5),
-                          Text(
+                        ),
+                        SizedBox(height: 5),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 14.0), // Flexible 부분에 왼쪽 패딩 추가
+                          child: Text(
                             '94조 기업가치를 꿈꾸는\n예비 창업가들의 팀입니다.',
                             softWrap: true,
                             style: TextStyle(
                               fontSize: 15.0, // 글자 크기
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -162,10 +170,13 @@ class MainMenuPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0), // 모서리 곡선 정도
                     ),
                   ),
-                  child: const Text(
-                    '팀원보기',
-                    style: TextStyle(fontSize: 40, color: Colors.white),
-                    textAlign: TextAlign.center,
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Text(
+                      '팀원보기',
+                      style: TextStyle(fontSize: 40, color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
@@ -174,32 +185,3 @@ class MainMenuPage extends StatelessWidget {
         ));
   }
 }
-
-// class MainMenuPage extends StatelessWidget {
-//   final List<PageInfo> pages;
-//   final Function(int) onPageSelected;
-
-//   const MainMenuPage({
-//     super.key,
-//     required this.pages,
-//     required this.onPageSelected,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           for (int i = 0; i < pages.length; i++) ...[
-//             if (i > 0) const SizedBox(height: AppConstants.spaceBetweenButtons),
-//             MenuButton(
-//               text: pages[i].title,
-//               onPressed: () => onPageSelected(i + 1),
-//             ),
-//           ],
-//         ],
-//       ),
-//     );
-//   }
-// }

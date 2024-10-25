@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Page Navigation Demo',
+      title: 'Team Intro',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
