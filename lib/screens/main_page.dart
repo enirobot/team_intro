@@ -6,6 +6,7 @@ import 'package:team_intro/screens/main_menu_page.dart';
 import 'package:team_intro/widgets/content_page.dart';
 import 'package:team_intro/widgets/introduction_hyunjung.dart';
 import 'package:team_intro/widgets/introduction_junny.dart';
+import 'package:team_intro/widgets/introduction_junny2.dart';
 import 'package:team_intro/widgets/introduction_liyujun.dart';
 import 'package:team_intro/widgets/introduction_ksj.dart';
 
@@ -64,7 +65,7 @@ class _MainPageState extends State<MainPage> {
       ),
       PageInfo(
         title: '이승준',
-        page: junny(
+        page: junny2(
           memberInfo: const MemberInfo(
             teamName: '구사조',
             imagePath: 'assets/images/seungjun_lee.png',
