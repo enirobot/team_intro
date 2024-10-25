@@ -94,7 +94,7 @@ class _MainPageState extends State<MainPage> {
                 '안녕하세요, 구사조의 팀원 이현정입니다.\n디자인 경험이 있고, 도장에서 하는\n운동이나 구기운동을 좋아합니다.',
             mbti: 'INFP',
             blogUrl:
-                'https://pasion2585.notion.site/10b20681ea5f8023a1f4dc5c4242f33c?pvs=4',
+                'https://jl20lemon.tistory.com/',
           ),
           onBackPressed: () => _navigateToPage(0),
         ),
