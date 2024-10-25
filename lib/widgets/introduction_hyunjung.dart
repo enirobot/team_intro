@@ -24,7 +24,7 @@ class Huynjung extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 1,
                 color: Color.fromARGB(255, 205, 215, 80)),
             Container(
-                height: MediaQuery.of(context).size.height * 0.65,
+                height: MediaQuery.of(context).size.height * 0.64,
                 width: MediaQuery.of(context).size.width * 1,
                 color: Color.fromARGB(230, 230, 230, 230))
           ])),
@@ -125,18 +125,6 @@ class Huynjung extends StatelessWidget {
                   ),
                 )
               ])),
-          Positioned(
-              bottom: 0,
-              child: Stack(children: [
-                Container(
-                    child: Row(children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 1,
-                    height: 5,
-                    color: const Color.fromARGB(255, 205, 215, 80),
-                  ),
-                ])),
-              ]))
         ])),
       );
     }
