@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:team_intro/constants.dart';
 import 'package:team_intro/models/page_info.dart';
 
 class MainMenuPage extends StatelessWidget {
@@ -175,8 +174,6 @@ class MainMenuPage extends StatelessWidget {
         ));
   }
 }
-<<<<<<< HEAD
-=======
 
 // class MainMenuPage extends StatelessWidget {
 //   final List<PageInfo> pages;
@@ -206,4 +203,3 @@ class MainMenuPage extends StatelessWidget {
 //     );
 //   }
 // }
->>>>>>> fbc2a6b0d2b10f7599c33944d8349dc2a3a55ccb

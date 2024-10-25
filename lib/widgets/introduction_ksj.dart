@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:team_intro/models/member_info.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class IntroductionKsj extends StatelessWidget {
   final MemberInfo memberInfo;
@@ -27,19 +26,20 @@ class IntroductionKsj extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.3,
             color: const Color(0xFF00AACC),
             child: Align(
-              alignment: const Alignment(0, -0.3), // x = 0 (가운데), y = -0.3 (상단 30%)
+              alignment:
+                  const Alignment(0, -0.3), // x = 0 (가운데), y = -0.3 (상단 30%)
               child: GestureDetector(
-                  onTap: onBackPressed,
-                  child: const Text(
-                    '구사조',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40,
-                    ),
+                onTap: onBackPressed,
+                child: const Text(
+                  '구사조',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
                   ),
                 ),
+              ),
             ),
             // child: Center(
             //   child: Padding(

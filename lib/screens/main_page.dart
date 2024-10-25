@@ -56,12 +56,7 @@ class _MainPageState extends State<MainPage> {
             email: 'yl1503412@gmail.com',
             introduction: '안녕하세요. \n부트캠프에 참가 하게 되어 \n기쁩니다.',
             mbti: 'ESFJ',
-<<<<<<< HEAD
-            blogUrl:
-                'https://pasion2585.notion.site/10b20681ea5f8023a1f4dc5c4242f33c?pvs=4',
-=======
             blogUrl: 'https://yl1503412.tistory.com/',
->>>>>>> fbc2a6b0d2b10f7599c33944d8349dc2a3a55ccb
           ),
           onBackPressed: () => _navigateToPage(0),
         ),
@@ -78,12 +73,7 @@ class _MainPageState extends State<MainPage> {
             email: 'junny3344@gmail.com',
             introduction: '좋아하는색 : 주황색\n전공 : 축산과, 양돈, 사무\n관심사 : 인문학',
             mbti: 'ENTP',
-<<<<<<< HEAD
             blogUrl: 'https://247wd.tistory.com/',
-=======
-            blogUrl:
-                'https://pasion2585.notion.site/10b20681ea5f8023a1f4dc5c4242f33c?pvs=4',
->>>>>>> fbc2a6b0d2b10f7599c33944d8349dc2a3a55ccb
           ),
           onBackPressed: () => _navigateToPage(0),
         ),
