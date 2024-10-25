@@ -158,7 +158,7 @@ class _MainPageState extends State<MainPage> {
         case 3:
           return const Color(0xFFED8A00); // Color for page 3
         case 4:
-          return const Color(0xFF60338D); // Color for page 4
+          return const Color.fromARGB(255, 205, 215, 80); // Color for page 4
         default:
           return Colors.grey; // Fallback color
       }
